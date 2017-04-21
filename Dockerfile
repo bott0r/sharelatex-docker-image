@@ -4,6 +4,12 @@ FROM sharelatex/sharelatex-base:v1.0.0
 
 ENV baseDir .
 
+#install redis and mongo
+RUN apt-get install -y --force-yes git mongodb-server redis-server wget sudo time
+RUN redis-server --daemonize yes
+RUN mongod --smallfiles
+
+
 # Install sharelatex settings file
 ADD ${baseDir}/settings.coffee /etc/sharelatex/settings.coffee
 ENV SHARELATEX_CONFIG /etc/sharelatex/settings.coffee

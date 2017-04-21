@@ -33,3 +33,7 @@ if [ ! -e "/var/lib/sharelatex/data/db.sqlite" ]; then
 fi
 
 chown www-data:www-data /var/lib/sharelatex/data/db.sqlite
+
+
+mongod &
+redis-server &

@@ -6,8 +6,6 @@ ENV baseDir .
 
 #install redis and mongo
 RUN apt-get install -y --force-yes git mongodb-server redis-server wget sudo time
-RUN redis-server --daemonize yes
-RUN mongod --smallfiles
 
 
 # Install sharelatex settings file

@@ -1,2 +1,10 @@
+Carbon copy of sharelatex/sharelatex except with integrated mongodb and redis server.
+Its a WIP
+
 ## Install
-Please see the [offical wiki for install guides](https://github.com/sharelatex/sharelatex/wiki/Production-Installation-Instructions)
+
+
+
+## after startup
+
+ ``` docker exec sharelatex /bin/bash -c "cd /var/www/sharelatex; grunt user:create-admin --email joe@example.com" ```
